@@ -1,0 +1,92 @@
+:root{
+    --background-color-body: #0a0a0a;
+    --background-color-nav: #1a1a1a;
+    --text-color: #eee;
+}
+
+body{
+    margin: 0;
+    font-family: "Montserrat",'Courier New', Courier, monospace;
+    color: var(--text-color);
+    background-color: var(--background-color-body);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: var(--background-color-nav);
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.element{
+    font-size: 18px;
+}
+
+.firstelement{
+    /*
+    Vamos supor que aqui seja uma logo - A. Mathias.
+    */
+
+    font-size: 20px;
+}
+
+.secondelement{
+    /*
+    Aqui teremos vários elementos: home, sobre, contato...
+    */
+
+    font-size: 15px;
+}
+
+.element, .firstelement, .secondelement{
+    transition: opacity 0.6s ease-in-out;
+}
+
+.sitebody{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*Hovers:*/
+.firstelement:hover, .element:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .navbar ul{
+        gap: 10px;
+    }
+
+    .sitebody{
+        padding: 5%;
+    }
+}
