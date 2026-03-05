@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Este é o meu primeiro portfólio pessoal, desenvolido para demonstrar um pouco da minha trajetória como desenvolvedor;.
+Este é o meu primeiro portfólio pessoal, desenvolido para demonstrar um pouco da minha trajetória como desenvolvedor.
 
 
 ## Tecnologias utilizadas:
