@@ -2,6 +2,11 @@
     --background-color-body: #0a0a0a;
     --background-color-nav: #1a1a1a;
     --text-color: #eee;
+    --background-color-terminal: black;
+    
+    /* For terminal */
+    --secondary-text-color: rgb(132, 132, 132);
+    --border-card-color: #eee;
 }
 
 body{
@@ -15,12 +20,12 @@ body{
     box-sizing: border-box;
 }
 
+/* Nav Bar */
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    height: auto;
     padding: 10px;
     background-color: var(--background-color-nav);
 }
@@ -32,61 +37,263 @@ body{
     width: 100%;
 }
 
-.menu{
-    display: flex;
-    gap: 20px;
-}
-
-.navbar li {
-    list-style: none;
-}
-
 .navbar a{
     color: var(--text-color);
     text-decoration: none;
 }
 
-.element{
-    font-size: 18px;
-}
-
-.firstelement{
-    /*
-    Vamos supor que aqui seja uma logo - A. Mathias.
-    */
-
+.logo{
     font-size: 20px;
+    list-style: none;
 }
 
-.secondelement{
-    /*
-    Aqui teremos vários elementos: home, sobre, contato...
-    */
-
+.element{
     font-size: 15px;
 }
 
-.element, .firstelement, .secondelement{
-    transition: opacity 0.6s ease-in-out;
+.menu{
+    display: flex;
+    list-style: none;
 }
 
+/* Hero */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    animation:fade 1.7s ease;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.pipe{
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+/* Terminal */
+.terminal{
+    width: 80%;
+    background-color: var(--background-color-terminal);
+    margin:40px auto;
+    padding:20px;
+    border-radius: 10px;
+    font-family: monospace, 'Courier New', Courier;
+    margin-top: 8vh;
+    margin-bottom: 20vh;
+}
+
+#terminal-output p{
+    margin: 5px 0px;
+}
+
+.terminal-input{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.terminal-input input{
+    background: none;
+    outline: none;
+    border: none;
+    font-family: monospace, sans-serif;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+/* Site body */
 .sitebody{
     padding-left: 10%;
     padding-right: 10%;
 }
 
-/*Hovers:*/
-.firstelement:hover, .element:hover{
-    opacity: 0.7;
-    cursor: pointer;
+/* Center */
+.center{
+    text-align: center;
 }
 
-@media (max-width: 768px){
-    .navbar ul{
-        gap: 10px;
+/* Text colors */
+.secondary-text{
+    color: var(--secondary-text-color);
+    transition: color 0.7s ease-in-out;
+}
+
+/* Cards */
+.cards-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--border-card-color);
+    border-radius: 7px;
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+.card i{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.card h4{
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card p{
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.project-card{
+    width: 75%;
+    height: auto;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid var(--border-card-color);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card h4{
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.project-card p{
+    margin: 10px 0 0 0;
+    font-weight: 400;
+}
+
+.project-card button{
+    background: var(--border-card-color);
+    border: 0;
+    border-radius: 7px;
+    margin: 3.5vh 0 0 0;
+    padding: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+.project-card a{
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+/* Hovers */
+.logo, .menu li{
+    transition: opacity 0.7s ease-in-out;
+}
+
+.logo:hover, .menu li:hover{
+    opacity: 0.7;
+}
+
+.secondary-text:hover{
+    color: var(--text-color);
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+.project-card button:hover{
+    background-color: var(--border-card-color);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Text box */
+.text-box{
+    margin-bottom: 20vh;
+}
+
+/* Key Frame */
+
+/* Fade */
+@keyframes fade{
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+}
+
+/* Blink */
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Media */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .card {
+        width: 100%;
     }
 
-    .sitebody{
-        padding: 5%;
+    .menu a{
+        display: none;
+    }
+
+    .navbar{
+        display: block;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .hero{
+        margin: 0;
+    }
+
+    .terminal{
+        width: 95%;
+        margin-bottom: 20vh;
     }
 }
