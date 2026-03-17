@@ -1,20 +1,23 @@
-# Adriano Mathias - Portfólio!
+# Adriano Mathias - Portfólio
 
 ## Sobre
 
-Este é o meu primeiro portfólio pessoal, desenvolido para demonstrar um pouco da minha trajetória como desenvolvedor.
+Este é o meu primeiro portfólio pessoal, desenvolvido com o objetivo de apresentar minha evolução como desenvolvedor e alguns dos meus conhecimentos práticos.
 
+## Tecnologias utilizadas
 
-## Tecnologias utilizadas:
+- HTML5
+- CSS3
+- JavaScript
 
-- HTML 5
-- CSS 3
+## Estilo
 
+O site foi desenvolvido com uma paleta de cores escura (cinza e preto) por padrão.  
 
-## Estilo:
+Além disso, conta com um terminal interativo, onde você pode personalizar o tema do site em tempo real.  
 
-Foi desenvolvido no estilo *black card*, utilizando tons de preto, cinza e branco.
+Para ver os comandos disponíveis, digite "help" no terminal.
 
-## Acesse o portfólio:
+## Acesse o portfólio
 
-- https://adrianomathias.github.io
+🔗 https://adrianomathias.github.io
